@@ -30,13 +30,13 @@ describe Students do
     expect(actual).to eq({name: "Greg", age: 15})
   end
 
-  it 'can find out if there are any old enough to drink', :focus => true do
+  it 'can find out if there are any old enough to drink' do
     expect(students.any_older_than?(21)).to eq true
 
     expect(students.any_older_than?(55)).to eq false
   end
 
-  it 'can find a specific student' do
+  it 'can find a specific student', :focus => true do
     actual = students.find_student({name: "Sue", age: 10})
     expect(actual).to eq({name: "Sue", age: 10})
 

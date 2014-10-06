@@ -50,4 +50,15 @@ class Students
       false
     end
   end
+
+  def find_student(student_search)
+    all.each do |student|
+      if student[:name] == student_search[:name] && student[:age] == student_search[:age]
+        @student = student
+      else
+        @student = nil
+      end
+    end
+      @student
+  end
 end
