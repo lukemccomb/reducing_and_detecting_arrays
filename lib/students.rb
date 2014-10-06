@@ -37,5 +37,17 @@ class Students
     @old.first
   end
 
-  
+  def any_older_than?(age)
+    @old = []
+    all.each do |student|
+      if student[:age] > age
+        @old << student
+      end
+    end
+    if @old.length > 0
+      true
+    else
+      false
+    end
+  end
 end
