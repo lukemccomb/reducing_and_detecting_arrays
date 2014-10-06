@@ -26,4 +26,16 @@ class Students
     end
     @name_string.strip
   end
+
+  def find_first_older_than(age)
+    @old = []
+    all.each do |student|
+      if student[:age] > age
+        @old << student
+      end
+    end
+    @old.first
+  end
+
+  
 end
